@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <!-- Embed Google Maps -->
+    <style>
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="logo.jpeg" alt="Crunch Town Logo" class="nav-logo"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tvs.html">TV's</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li id="search-container">
+                    <input type="text" id="search" placeholder="Search ..." onkeyup="handleSearch(event)">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="contact-info">
+          <center><img src="logo.jpeg" alt=" Logo" height="250px" width="250px"></center>    
+            <br>
+            <h2><center>Contact Us</center></h2>
+        
+            <!-- Location -->
+            <h3><center>Location</center></h3>
+            <p>
+        
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47483.99184621957!2d-88.25549910253491!3d17.504595750884736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5c584b483377cf%3A0xe1dbdc6e9012ff22!2sBelize%20City!5e1!3m2!1sen!2sbz!4v1742877711051!5m2!1sen!2sbz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    Belize City, Belize
+                </a>
+            </p>
+
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <!-- WhatsApp Numbers (Left) -->
+                <div class="contact-column">
+                    <h3>WhatsApp Numbers</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5016001234" target="_blank">+501 600-1234</a></li>
+                        <li><a href="https://wa.me/5016005678" target="_blank">+501 600-5678</a></li>
+                        <li><a href="https://wa.me/5016009101" target="_blank">+501 600-9101</a></li>
+                    </ul>
+                </div>
+
+                <!-- Emails (Right) -->
+                <div class="contact-column">
+                    <h3>Email</h3>
+                    <ul>
+                        <li><a href="mailto:info@cruchtown.com">info@visionpluselectronics.com</a></li>
+                        <li><a href="mailto:support@crunchtown.com">support@visionpluselectronics.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+          
+            <!-- Back to Home Link -->
+            <a href="index.html" class="back-home">Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VisionPlus Electronics. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="logo.jpeg" alt="  Logo" class="nav-logo"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tvs.html">TV's</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li id="search-container">
+                    <input type="text" id="search" placeholder="Search ..." onkeyup="handleSearch(event)">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-container">
+        <div class="receipt">
+            <div class="receipt-header">
+                <img src="logo.jpeg" alt=" Logo">
+                <h2>Order Summary</h2>
+            </div>
+            <div class="receipt-items">
+                <h3>Items in Cart</h3>
+                <ul id="cart-items-list"></ul>
+            </div>
+            <div class="receipt-totals">
+                <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                <p>GST (12.5%): <span id="gst">$0.00</span></p>
+                <p><strong>Total: <span id="total">$0.00</span></strong></p>
+            </div>
+        </div>
+        <div class="payment">
+            <h3>Payment Details</h3>
+            <form id="payment-form">
+                <label for="cardholder-name">Cardholder Name</label>
+                <input type="text" id="cardholder-name" name="cardholder-name" placeholder="John Doe" required>
+                <div class="error-message">Please fill out this field.</div>
+
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                <div class="error-message">Please fill out this field.</div>
+
+                <label for="expiration-date">Expiration Date</label>
+                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+                <div class="error-message">Please fill out this field.</div>
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                <div class="error-message">Please fill out this field.</div>
+
+                <button type="submit" id="submit-payment">Pay Now</button>
+            </form>
+        </div>
+        <!-- Confirmation Modal -->
+        <div class="modal">
+            <div class="modal-content">
+                <h3>Confirm Payment</h3>
+                <p>Are you sure you want to proceed with the payment?</p>
+                <button id="confirm-payment">Confirm</button>
+                <button id="cancel-payment">Cancel</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VisionPlus Electronics. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+

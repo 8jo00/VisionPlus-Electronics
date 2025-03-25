@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionPlus Electronics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="logo.jpeg" alt="VisionPlus Electronics Logo" class="nav-logo"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tvs.html">TV'S</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li id="search-container">
+                    <input type="text" id="search" placeholder="Search ..." onkeyup="handleSearch(event)">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- Welcome Section with Image Background -->
+<section class="welcome-section">
+    <div class="image-background">
+        <img src="inback.jpeg" alt="Background Image">
+    </div>
+    <div class="welcome-title">
+        <h1>Welcome to VisionPlus Electronics</h1>
+        <h4>"See More, Live Better!"</h4>
+    </div>
+</section>
+
+    <!-- About Us Section -->
+    <h1 class="about"><center>About Us</center></h1>
+    <p class="aboutstones">
+        At VisionPlus Electronics, we believe that the right television can transform your home entertainment experience. Founded in [Year], our mission is to provide high-quality, cutting-edge TVs at affordable prices, ensuring that every customer enjoys crystal-clear visuals, smart features, and immersive sound.
+    </p>
+
+    <!-- Product Catalog -->
+    <h1 class="best">TV'S</h1>
+    <section id="catalog">
+        <div class="product" data-name="Samsung QN55Q80AAFXZA 55 QLED 4K Smart TV">
+            <img src="c1.webp" alt="Samsung QN55Q80AAFXZA 55 QLED 4K Smart TSamsung QN55Q80AAFXZA 55 QLED 4K Smart TV" height="20px" width="15px">
+            <h3>Samsung QN55Q80AAFXZA (55" QLED 4K Smart TV)</h3>
+            <p>Description:<br>
+                Quantum HDR, Alexa/Bixby Voice Control, 120Hz refresh rate for gaming.</p>
+            <span>$3,800 BZD</span>
+            <button onclick="addToCart(' Samsung QN55Q80AAFXZA 55 QLED 4K Smart TV', 3800)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-name="  Xiaomi Mi TV P1 50" (4K Android TV, 50-inch) ">
+            <img src="c2.webp" alt=" Xiaomi Mi TV P1 50" (4K Android TV, 50-inch) ">
+            <h3> Xiaomi Mi TV P1 50" (4K Android TV, 50-inch)</h3>
+            <p>Description:<br>
+                Google Assistant built-in, Dolby Vision, sleek bezel-less design.</p>
+               
+            <span>$2,500 BZD</span>
+            <button onclick="addToCart('  Xiaomi Mi TV P1 50 ', 2500)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-name="  TCL 65R646 (65" Mini-LED 4K Google TV)">
+            <img src="c3.webp" alt="  TCL 65R646 (65" Mini-LED 4K Google TV)">
+            <h3>  TCL 65R646 (65" Mini-LED 4K Google TV)</h3>
+            <p>Description:<br>
+                Crunchy, cheesy, and downright irresistible.
+                </p>
+            <span>$1,950 BZD</span>
+            <button onclick="addToCart('  TCL 65R646 65 Mini-LED 4K Google TV', 1950)">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VisionPlus Electronics. All rights reserved.</p>
+    </footer>
+</body>
+</html>
