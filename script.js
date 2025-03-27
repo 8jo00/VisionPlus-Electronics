@@ -277,3 +277,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize slideshow
+    const slideshow = document.getElementById('slideshow');
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlide = 0;
+    let slideInterval;
+    const slideDuration = 5000; // 5 seconds
+    
+    // Set slideshow width based on number of slides
+    function setSlideshowWidth() {
+        const slideWidth = document.querySelector('.slideshow-container').offsetWidth;
+        slideshow.style.width = `${slideWidth * slides.length}px`;
+        slides.forEach(slide => {
+            slide.style.width = `${slideWidth}px`;
+        });
+    }
+    
+    // Update slide position
+    function updateSlide() {
+        const slideWidth = document.querySelector('.slideshow-container').offsetWidth;
+        slideshow.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentSlide);
+        });
+    }
+    
+    // Next slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
+        resetInterval();
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide();
+        resetInterval();
+    }
+    
+    // Go to specific slide
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlide();
+        resetInterval();
+    }
+    
+    // Reset auto-advance interval
+    function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, slideDuration);
+    }
+    
+    // Initialize
+    setSlideshowWidth();
+    updateSlide();
+    slideInterval = setInterval(nextSlide, slideDuration);
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        setSlideshowWidth();
+        updateSlide();
+    });})
