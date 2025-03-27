@@ -949,7 +949,7 @@ nav a:hover::after {
 
 .product p {
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.372);
     margin: 5px 0;
 }
 
@@ -988,7 +988,7 @@ nav a:hover::after {
     display: flex;
     justify-content: space-between;
     margin: 40px auto;
-    max-width: 1400px;
+    max-width: 1500px;
     padding: 20px;
     flex: 1;
     gap: 20px;
@@ -1005,18 +1005,18 @@ nav a:hover::after {
 }
 
 .receipt-header h2, .receipt-items h3, .payment h3 {
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(116, 103, 103, 0.165);
 }
 
 .receipt-items li {
     color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgb(0, 0, 0);
     padding-bottom: 10px;
 }
 
 .receipt-totals {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgb(255, 255, 255);
 }
 
 /* ===== Contact Section - Matching RGB Theme ===== */
@@ -1060,7 +1060,28 @@ nav a:hover::after {
 
 
 
+/* Cart Totals - White Text */
+.receipt-totals p {
+    color: white !important;
+}
 
+.receipt-totals strong {
+    color: white !important;
+}
+
+/* Specific targeting for each total line */
+.receipt-totals p:nth-child(1) { /* Subtotal */
+    color: white !important;
+}
+
+.receipt-totals p:nth-child(2) { /* GST */
+    color: white !important;
+}
+
+.receipt-totals p:nth-child(3) { /* Total */
+    color: white !important;
+    font-weight: bold;
+}
 
 
 
